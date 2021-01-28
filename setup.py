@@ -5,9 +5,9 @@ import os
 from setuptools import setup, find_packages
 from pathlib import Path
 
-core_req = ['ftfy', 'regex', 'tqdm', 'torch==1.7.1', 'torchvision==0.8.2']
+core_req = ['ftfy', 'regex', 'tqdm', 'torch~=1.7', 'torchvision']
 extras_require={
-    'cuda': ['cudatoolkit==11.0'],
+    'cuda': ['cudatoolkit>=10'],
     'dev': ['pytest']
 }
 package_data = [str(x) for x in list(Path('clip').rglob("*.gz"))]
